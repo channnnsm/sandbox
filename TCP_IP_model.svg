@@ -1,28 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-    <!-- 背景の四角形 -->
-    <rect width="400" height="300" fill="#ffffff"/>
-    
-    <!-- アプリケーション層 -->
-    <rect x="50" y="40" width="300" height="60" fill="#FFB6C1" stroke="#000000"/>
-    <text x="200" y="65" text-anchor="middle" font-size="16">アプリケーション層</text>
-    <text x="200" y="85" text-anchor="middle" font-size="14">(HTTPs, SSH)</text>
-    
-    <!-- トランスポート層 -->
-    <rect x="50" y="110" width="300" height="60" fill="#98FB98" stroke="#000000"/>
-    <text x="200" y="135" text-anchor="middle" font-size="16">トランスポート層</text>
-    <text x="200" y="155" text-anchor="middle" font-size="14">(TCP, UDP)</text>
-    
-    <!-- ネットワーク層 -->
-    <rect x="50" y="180" width="300" height="60" fill="#87CEEB" stroke="#000000"/>
-    <text x="200" y="205" text-anchor="middle" font-size="16">ネットワーク層</text>
-    <text x="200" y="225" text-anchor="middle" font-size="14">(IP, ICMP)</text>
-    
-    <!-- データリンク層+物理層 -->
-    <rect x="50" y="250" width="300" height="60" fill="#DDA0DD" stroke="#000000"/>
-    <text x="200" y="275" text-anchor="middle" font-size="16">データリンク層 + 物理層</text>
-    
-    <!-- 層を接続する矢印 -->
-    <path d="M 180 100 L 170 110 L 190 110 Z" fill="#000000"/> <!-- 下向き矢印 -->
-    <path d="M 180 170 L 170 180 L 190 180 Z" fill="#000000"/>
-    <path d="M 180 240 L 170 250 L 190 250 Z" fill="#000000"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 350">
+  <!-- 定義: ドロップシャドウ -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="350" fill="#f0f0f0"/>
+  
+  <!-- アプリケーション層 -->
+  <rect x="50" y="40" width="300" height="60" fill="#FFB6C1" stroke="#000000" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="65" text-anchor="middle" font-size="16" font-family="sans-serif">アプリケーション層</text>
+  <text x="200" y="85" text-anchor="middle" font-size="14" font-family="sans-serif">(HTTPs, SSH)</text>
+  
+  <!-- トランスポート層 -->
+  <rect x="50" y="110" width="300" height="60" fill="#98FB98" stroke="#000000" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="135" text-anchor="middle" font-size="16" font-family="sans-serif">トランスポート層</text>
+  <text x="200" y="155" text-anchor="middle" font-size="14" font-family="sans-serif">(TCP, UDP)</text>
+  
+  <!-- インターネット層 -->
+  <rect x="50" y="180" width="300" height="60" fill="#87CEEB" stroke="#000000" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="205" text-anchor="middle" font-size="16" font-family="sans-serif">インターネット層</text>
+  <text x="200" y="225" text-anchor="middle" font-size="14" font-family="sans-serif">(IP, ICMP)</text>
+  
+  <!-- ネットワークインターフェース層 -->
+  <rect x="50" y="250" width="300" height="60" fill="#DDA0DD" stroke="#000000" rx="8" filter="url(#shadow)"/>
+  <text x="200" y="275" text-anchor="middle" font-size="16" font-family="sans-serif">ネットワークインターフェース層</text>
+  
+  <!-- 各レイヤーを接続する線 -->
+  <line x1="200" y1="100" x2="200" y2="110" stroke="#000" stroke-width="2"/>
+  <line x1="200" y1="170" x2="200" y2="180" stroke="#000" stroke-width="2"/>
+  <line x1="200" y1="240" x2="200" y2="250" stroke="#000" stroke-width="2"/>
 </svg>
