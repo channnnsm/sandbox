@@ -4,7 +4,7 @@
   
   <!-- メインタイトル -->
   <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
-    IPアドレスブロックが持つ情報
+    IPアドレスの表現
   </text>
   
   <!-- セクション1: 32bit表現 -->
@@ -12,7 +12,7 @@
     1. 32bit表現
   </text>
   <!-- 青いボックス -->
-  <rect x="50" y="60" width="700" height="40" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+  <rect x="50" y="60" width="660" height="40" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
   <!-- 青いボックス内 左端に32bitのラベル -->
   <text x="60" y="85" font-size="14" fill="#006064" text-anchor="start">
     32bit
@@ -52,7 +52,7 @@
   <!-- Box4 -->
   <rect x="560" y="200" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
   <text x="635" y="220" text-anchor="middle" font-size="16" fill="#e65100">
-    00000000.
+    00000000
     <tspan x="635" dy="18" font-size="12">8bit</tspan>
   </text>
   
@@ -86,15 +86,15 @@
   <!-- Box4: 第4オクテット -->
   <rect x="560" y="350" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
   <text x="635" y="370" text-anchor="middle" font-size="16" fill="#2e7d32">
-    0.
+    0
     <tspan x="635" dy="18" font-size="12">第4オクテット</tspan>
   </text>
   
   <!-- ネットワーク部・ホスト部のグループ化（ダッシュの縁取り） -->
   <!-- ネットワーク部（第1,2オクテットのグループ） -->
-  <rect x="40" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
+  <rect x="45" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
   <!-- ホスト部（第3,4オクテットのグループ） -->
-  <rect x="380" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
+  <rect x="385" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
   
   <!-- ネットワーク部・ホスト部のラベル（緑のボックス群と重ならないよう下部に配置） -->
   <text x="205" y="430" text-anchor="middle" font-size="14" fill="#388e3c">
