@@ -1,77 +1,106 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
-  <!-- タイトル -->
-  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold">IPアドレスブロックが持つ情報</text>
+  <!-- 全体背景 -->
+  <rect width="800" height="500" fill="#f5f5f5" />
+  
+  <!-- メインタイトル -->
+  <text x="400" y="30" text-anchor="middle" font-size="24" font-weight="bold" fill="#333">
+    IPアドレスブロックが持つ情報
+  </text>
   
   <!-- セクション1: 32bit表現 -->
-  <text x="50" y="50" font-size="16" font-weight="bold">1. 32bit表現</text>
-  <!-- 32bit用の長方形 -->
-  <rect x="50" y="60" width="700" height="40" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
-  <text x="400" y="90" text-anchor="middle" font-size="16" fill="#006064">
-    11000000 10101000 10000110 00110011
+  <text x="50" y="50" font-size="16" font-weight="bold" fill="#333">
+    1. 32bit表現
   </text>
-  <!-- 下部のブラケット風の線と「32bit」の注釈 -->
-  <line x1="50" y1="105" x2="200" y2="105" stroke="#006064" stroke-width="2" />
-  <line x1="600" y1="105" x2="750" y2="105" stroke="#006064" stroke-width="2" />
-  <text x="400" y="105" text-anchor="middle" font-size="14" fill="#006064">32bit</text>
+  <!-- 青いボックス -->
+  <rect x="50" y="60" width="700" height="40" fill="#e0f7fa" stroke="#006064" stroke-width="2"/>
+  <!-- 青いボックス内 左端に32bitのラベル -->
+  <text x="60" y="85" font-size="14" fill="#006064" text-anchor="start">
+    32bit
+  </text>
+  <!-- 32bitの2進数文字列（中央寄せ） -->
+  <text x="400" y="85" text-anchor="middle" font-size="16" fill="#006064">
+    11111111 11111111 00000000 00000000  
+  </text>
   
   <!-- セクション2: ドット区切り 8bit表現 -->
-  <text x="50" y="140" font-size="16" font-weight="bold">2. ドット区切り 8bit表現</text>
-  <!-- ドット区切りの全体表記 -->
-  <text x="210" y="160" text-anchor="middle" font-size="14" fill="#37474f">
-    11000000.10101000.10000110.00110011
+  <text x="50" y="160" font-size="16" font-weight="bold" fill="#333">
+    2. ドット区切り 8bit表現
   </text>
-  
-  <!-- 8bitセグメント用のボックス (2行×2列) -->
-  <!-- 第1行 -->
-  <rect x="50" y="170" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="125" y="200" text-anchor="middle" font-size="16" fill="#e65100">11000000</text>
-  <text x="190" y="215" text-anchor="end" font-size="12" fill="#e65100">8bit</text>
-  
-  <rect x="220" y="170" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="295" y="200" text-anchor="middle" font-size="16" fill="#e65100">10101000</text>
-  <text x="360" y="215" text-anchor="end" font-size="12" fill="#e65100">8bit</text>
-  
-  <!-- 第2行 -->
-  <rect x="50" y="240" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="125" y="270" text-anchor="middle" font-size="16" fill="#e65100">10000110</text>
-  <text x="190" y="285" text-anchor="end" font-size="12" fill="#e65100">8bit</text>
-  
-  <rect x="220" y="240" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
-  <text x="295" y="270" text-anchor="middle" font-size="16" fill="#e65100">00110011</text>
-  <text x="360" y="285" text-anchor="end" font-size="12" fill="#e65100">8bit</text>
+  <!-- ドット区切り表現の全体文字列（左寄せ） -->
+  <text x="50" y="180" font-size="14" fill="#e65100">
+    11111111.11111111.00000000.00000000  
+  </text>
+  <!-- 8bit用のオレンジボックス（横一列） -->
+  <!-- Box1 -->
+  <rect x="50" y="200" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="125" y="220" text-anchor="middle" font-size="16" fill="#e65100">
+    11111111.
+    <tspan x="125" dy="18" font-size="12">8bit</tspan>
+  </text>
+  <!-- Box2 -->
+  <rect x="220" y="200" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="295" y="220" text-anchor="middle" font-size="16" fill="#e65100">
+    11111111.
+    <tspan x="295" dy="18" font-size="12">8bit</tspan>
+  </text>
+  <!-- Box3 -->
+  <rect x="390" y="200" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="465" y="220" text-anchor="middle" font-size="16" fill="#e65100">
+    00000000.
+    <tspan x="465" dy="18" font-size="12">8bit</tspan>
+  </text>
+  <!-- Box4 -->
+  <rect x="560" y="200" width="150" height="50" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="635" y="220" text-anchor="middle" font-size="16" fill="#e65100">
+    00000000.
+    <tspan x="635" dy="18" font-size="12">8bit</tspan>
+  </text>
   
   <!-- セクション3: 10進数表現 -->
-  <text x="50" y="320" font-size="16" font-weight="bold">3. 10進数表現</text>
-  <!-- 10進数の全体表記 -->
-  <text x="400" y="340" text-anchor="middle" font-size="16" fill="#1b5e20">
-    192.168.134.51
+  <text x="50" y="300" font-size="16" font-weight="bold" fill="#333">
+    3. 10進数表現
+  </text>
+  <!-- 10進数全体表記（左寄せ） -->
+  <text x="50" y="320" font-size="16" fill="#1b5e20">
+    255.255.0.0
+  </text>
+  <!-- 10進数の緑のボックス（横一列） -->
+  <!-- Box1: 第1オクテット -->
+  <rect x="50" y="350" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="125" y="370" text-anchor="middle" font-size="16" fill="#2e7d32">
+    255.
+    <tspan x="125" dy="18" font-size="12">第1オクテット</tspan>
+  </text>
+  <!-- Box2: 第2オクテット -->
+  <rect x="220" y="350" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="295" y="370" text-anchor="middle" font-size="16" fill="#2e7d32">
+    255.
+    <tspan x="295" dy="18" font-size="12">第2オクテット</tspan>
+  </text>
+  <!-- Box3: 第3オクテット -->
+  <rect x="390" y="350" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="465" y="370" text-anchor="middle" font-size="16" fill="#2e7d32">
+    0.
+    <tspan x="465" dy="18" font-size="12">第3オクテット</tspan>
+  </text>
+  <!-- Box4: 第4オクテット -->
+  <rect x="560" y="350" width="150" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="635" y="370" text-anchor="middle" font-size="16" fill="#2e7d32">
+    0.
+    <tspan x="635" dy="18" font-size="12">第4オクテット</tspan>
   </text>
   
-  <!-- オクテット用のボックス (2行×2列) -->
-  <!-- 第1行 -->
-  <rect x="50" y="360" width="100" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="100" y="390" text-anchor="middle" font-size="16" fill="#2e7d32">192</text>
-  <text x="100" y="405" text-anchor="middle" font-size="12" fill="#2e7d32">第1オクテット</text>
+  <!-- ネットワーク部・ホスト部のグループ化（ダッシュの縁取り） -->
+  <!-- ネットワーク部（第1,2オクテットのグループ） -->
+  <rect x="40" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
+  <!-- ホスト部（第3,4オクテットのグループ） -->
+  <rect x="380" y="345" width="330" height="60" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
   
-  <rect x="200" y="360" width="100" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="250" y="390" text-anchor="middle" font-size="16" fill="#2e7d32">168</text>
-  <text x="250" y="405" text-anchor="middle" font-size="12" fill="#2e7d32">第2オクテット</text>
-  
-  <!-- 第2行 -->
-  <rect x="50" y="430" width="100" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="100" y="460" text-anchor="middle" font-size="16" fill="#2e7d32">134</text>
-  <text x="100" y="475" text-anchor="middle" font-size="12" fill="#2e7d32">第3オクテット</text>
-  
-  <rect x="200" y="430" width="100" height="50" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="250" y="460" text-anchor="middle" font-size="16" fill="#2e7d32">51</text>
-  <text x="250" y="475" text-anchor="middle" font-size="12" fill="#2e7d32">第4オクテット</text>
-  
-  <!-- ネットワーク部とホスト部のグループ化 (ダッシュの縁取り) -->
-  <!-- ネットワーク部: 左列のグループ -->
-  <rect x="40" y="355" width="130" height="130" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
-  <text x="105" y="345" text-anchor="middle" font-size="14" fill="#388e3c">ネットワーク部</text>
-  
-  <!-- ホスト部: 右列のグループ -->
-  <rect x="190" y="355" width="130" height="130" fill="none" stroke="#388e3c" stroke-dasharray="4"/>
-  <text x="255" y="345" text-anchor="middle" font-size="14" fill="#388e3c">ホスト部</text>
+  <!-- ネットワーク部・ホスト部のラベル（緑のボックス群と重ならないよう下部に配置） -->
+  <text x="205" y="430" text-anchor="middle" font-size="14" fill="#388e3c">
+    ネットワーク部
+  </text>
+  <text x="545" y="430" text-anchor="middle" font-size="14" fill="#388e3c">
+    ホスト部
+  </text>
 </svg>
