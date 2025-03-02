@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 950">
+  <!-- 背景 -->
+  <rect width="800" height="950" fill="#f5f5f5"/>
+  
+  <!-- タイトル -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">Gitの基本構造と.gitignoreの役割</text>
+  
+  <!-- 1. .gitディレクトリセクション -->
+  <rect x="50" y="80" width="700" height="260" rx="10" fill="#e6f7ff" stroke="#1890ff" stroke-width="2"/>
+  <text x="70" y="110" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#1890ff">1. .git ディレクトリ</text>
+  
+  <!-- .gitディレクトリの説明 -->
+  <text x="70" y="140" font-family="Arial, sans-serif" font-size="16" fill="#333">• git init を実行すると、カレントディレクトリに.gitという隠しフォルダが作成される</text>
+  <text x="70" y="165" font-family="Arial, sans-serif" font-size="16" fill="#333">• このフォルダがGitの「履歴管理」のすべてを保持している</text>
+  
+  <!-- .gitディレクトリの構造 -->
+  <rect x="100" y="180" width="600" height="130" rx="5" fill="#fff" stroke="#1890ff" stroke-width="1"/>
+  <text x="120" y="205" font-family="Arial, sans-serif" font-size="15" fill="#333">hooks: Gitフックのサンプルスクリプト（Git操作の前後に自動実行）</text>
+  <text x="120" y="230" font-family="Arial, sans-serif" font-size="15" fill="#333">info: リポジトリに関する追加情報</text>
+  <text x="120" y="255" font-family="Arial, sans-serif" font-size="15" fill="#333">objects: コミットデータやファイルのスナップショット</text>
+  <text x="120" y="280" font-family="Arial, sans-serif" font-size="15" fill="#333">refs: ブランチやタグの情報</text>
+  <text x="120" y="305" font-family="Arial, sans-serif" font-size="15" fill="#333">HEAD: 現在のブランチの情報</text>
+  
+  <!-- .gitディレクトリ注意書き -->
+  <text x="400" y="330" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#f5222d">→ .git を削除するとGitの管理情報が失われ、追跡が解除される。</text>
+  
+  <!-- 2. ローカル環境 vs. リモート環境セクション -->
+  <rect x="50" y="360" width="700" height="240" rx="10" fill="#f6ffed" stroke="#52c41a" stroke-width="2"/>
+  <text x="70" y="390" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#52c41a">2. ローカル環境 vs. リモート環境</text>
+  
+  <!-- ローカルとリモートの図解 -->
+  <rect x="100" y="410" width="250" height="160" rx="10" fill="#fff" stroke="#52c41a" stroke-width="2"/>
+  <text x="225" y="430" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">ローカル環境</text>
+  <text x="225" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">作業ディレクトリ</text>
+  <text x="225" y="480" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">.git/heads/</text>
+  <text x="225" y="505" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">.git/remotes/origin/</text>
+  
+  <rect x="450" y="410" width="250" height="160" rx="10" fill="#fff" stroke="#52c41a" stroke-width="2"/>
+  <text x="575" y="430" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#333">リモート環境</text>
+  <text x="575" y="455" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">GitHub等のサーバー</text>
+  <text x="575" y="480" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">リポジトリのデータ</text>
+  <text x="575" y="505" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#333">.github/（GitHub Actions等）</text>
+  
+  <!-- 矢印 -->
+  <path d="M350 450 L450 450" stroke="#52c41a" stroke-width="2"/>
+  <polygon points="445,445 455,450 445,455" fill="#52c41a"/>
+  <text x="400" y="440" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#52c41a">git fetch</text>
+  
+  <path d="M450 470 L350 470" stroke="#52c41a" stroke-width="2"/>
+  <polygon points="355,465 345,470 355,475" fill="#52c41a"/>
+  <text x="400" y="490" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#52c41a">git pull / git merge</text>
+  
+  <!-- ローカル vs. リモート注意点 -->
+  <text x="400" y="590" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#333">• fetch しただけでは作業ディレクトリには反映されない</text>
+  
+  <!-- 3. .gitignoreの役割セクション -->
+  <rect x="50" y="620" width="700" height="280" rx="10" fill="#fff0f6" stroke="#eb2f96" stroke-width="2"/>
+  <text x="70" y="650" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#eb2f96">3. .gitignore の役割</text>
+  
+  <!-- .gitignoreの説明 -->
+  <text x="70" y="680" font-family="Arial, sans-serif" font-size="16" fill="#333">• Gitで管理したくないファイルやフォルダを指定するための設定ファイル</text>
+  <text x="70" y="705" font-family="Arial, sans-serif" font-size="16" fill="#333">• .gitignore に書かれたパターンに一致するファイルは、git add してもステージングされない</text>
+  
+  <!-- .gitignoreによく含まれるものの表 -->
+  <rect x="100" y="725" width="600" height="130" rx="5" fill="#fff" stroke="#eb2f96" stroke-width="1"/>
+  <text x="110" y="745" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">分類</text>
+  <text x="300" y="745" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#333">例</text>
+  
+  <line x1="100" y1="750" x2="700" y2="750" stroke="#eb2f96" stroke-width="1"/>
+  
+  <text x="110" y="770" font-family="Arial, sans-serif" font-size="14" fill="#333">環境依存のファイル</text>
+  <text x="300" y="770" font-family="Arial, sans-serif" font-size="14" fill="#333">.DS_Store（Mac）、Thumbs.db（Windows）</text>
+  
+  <text x="110" y="790" font-family="Arial, sans-serif" font-size="14" fill="#333">ログファイル</text>
+  <text x="300" y="790" font-family="Arial, sans-serif" font-size="14" fill="#333">*.log</text>
+  
+  <text x="110" y="810" font-family="Arial, sans-serif" font-size="14" fill="#333">ビルド成果物</text>
+  <text x="300" y="810" font-family="Arial, sans-serif" font-size="14" fill="#333">dist/、build/、*.o</text>
+  
+  <text x="110" y="830" font-family="Arial, sans-serif" font-size="14" fill="#333">依存パッケージ</text>
+  <text x="300" y="830" font-family="Arial, sans-serif" font-size="14" fill="#333">node_modules/、venv/</text>
+  
+  <text x="110" y="850" font-family="Arial, sans-serif" font-size="14" fill="#333">個人情報や設定ファイル</text>
+  <text x="300" y="850" font-family="Arial, sans-serif" font-size="14" fill="#333">.env、config.yml、*.pem</text>
+  
+  <!-- .gitignore注意書き -->
+  <text x="400" y="870" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#f5222d">→ すでにGit管理下にあるファイルは、.gitignoreに追加しても無視されない</text>
+  <text x="400" y="890" font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#f5222d">git rm --cached <ファイル名> で追跡解除する必要がある</text>
+</svg>
