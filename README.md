@@ -10,3 +10,4 @@
 | 2    | ネットワーク技術の基礎 -AWS VPCへ挑む前の下準備Part1-              | [Zenn](https://zenn.dev/channnnsm/articles/fb5c12a2a4d8bb)                              | [TCP/IPモデル](https://github.com/channnnsm/sandbox/blob/main/TCP_IP_model.svg), [TCPコネクション](https://github.com/channnnsm/sandbox/blob/main/TCPconnection.md) |
 | 3    | IPアドレスとサブネットマスク -AWS VPCへ挑む前の下準備Part2-              | [Zenn](https://zenn.dev/channnnsm/articles/26498203879f9b)                              | [IPアドレスの表現法](https://github.com/channnnsm/sandbox/blob/main/IP.svg)|
 | 4    | もう.envファイルを誤爆しない！Git .gitignore の基本と実践              | [Zenn](https://zenn.dev/channnnsm/articles/2cc6b5f875229d)                              | []()|
+| 5    | 「originってどこにいるの？」.gitフォルダの中身からGitの仕組みを紐解く             | [Zenn](https://zenn.dev/channnnsm/articles/c7cb011a7d9f82)                              | []()|
